@@ -1,0 +1,10 @@
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\BuissnessLogic.dll
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\BuissnessLogic.pdb
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\obj\Debug\BuissnessLogic.csprojResolveAssemblyReference.cache
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\obj\Debug\BuissnessLogic.csproj.CoreCompileInputs.cache
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\obj\Debug\BuissnessLogic.dll
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\obj\Debug\BuissnessLogic.pdb
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\App.config
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\Account_bank.dll
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\Account_bank.pdb
+C:\Users\asehrawat\source\repos\Account_bank\BuissnessLogic\bin\Debug\Account_bank.dll.config
