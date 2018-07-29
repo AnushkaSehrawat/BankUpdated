@@ -11,8 +11,10 @@ namespace Account_bank
 {
     public class Class1
     {
-       static  SqlConnection con = new SqlConnection();
-       
+       static private int _balance = -100000000;
+       static private int _acc_id = 0;
+       public static SqlConnection con = new SqlConnection();
+      
         
         public void initial_connection()
         {
@@ -23,39 +25,36 @@ namespace Account_bank
 
         }
 
-        public static int search(int id)
+        public int search(int id)
         {
-            int balance = -100000000;
-            int acc_id=0;
+   
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from Account where account_id=@id";
             cmd.Parameters.Add(new SqlParameter("@id",id));
             SqlDataReader sq = cmd.ExecuteReader();
-           // Console.WriteLine(acc_id);
+            
+        
             if (!sq.HasRows)
             {
                 Console.WriteLine("No Entry in the database");
             }
             else
             {
-                while (sq.Read())
-                {
-                    acc_id = sq.GetInt32(sq.GetOrdinal("account_id")) ;
-                    if (acc_id==id)
-                    {
-                        balance = sq.GetInt32(sq.GetOrdinal("balance"));
-                        break;
-                    }
-                }
+                
+                    _balance = sq.GetInt32(sq.GetOrdinal("balance")) ;
+                    
+                
 
 
             }
-            return balance;
+            sq.Close();
+           
+            return _balance;
 
 
         }
-        public static string search_acc_type(int id)
+        public  string search_acc_type(int id)
         {
             
             int acc_id;
@@ -77,19 +76,21 @@ namespace Account_bank
                     acc_id = sq.GetInt32(sq.GetOrdinal("account_id"));
                     if (acc_id == id)
                     {
-                        Acc_type = sq.GetString(sq.GetOrdinal("account_type"));
+                        Acc_type = sq.GetString(sq.GetOrdinal("acc_type"));
                         break;
                     }
                 }
 
 
             }
+            sq.Close();
+           
             return Acc_type;
 
 
         }
 
-        public static void insert(int acc_id,string name,string acc_type,int balance)
+        public  void insert(int acc_id,string name,string acc_type,int balance)
         {
             try
             {
@@ -102,16 +103,18 @@ namespace Account_bank
                 cmd.Parameters.Add(new SqlParameter("@balance", balance));
 
                 cmd.ExecuteNonQuery();
+                
             }
             catch(SqlException sq)
             {
                 Console.WriteLine(sq.Message);
             }
+           
          
 
         }
 
-        public static void Update(int bal,int id)
+        public  void Update(int bal,int id)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -119,42 +122,52 @@ namespace Account_bank
             cmd.Parameters.Add(new SqlParameter("@bal",bal));
             cmd.Parameters.Add(new SqlParameter("@id", id));
             cmd.ExecuteNonQuery();
+           
 
         }
 
-        public static void Display(int id)
+        public  void Display()
         {
             Console.WriteLine("Enter the account Id whose details you want to display:");
-            id = int.Parse(Console.ReadLine());
+            int id = int.Parse(Console.ReadLine());
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select *from ACCOUNT";
+            cmd.CommandText = "select *from ACCOUNT where account_id=@id";
+            cmd.Parameters.Add(new SqlParameter("@id",id));
             SqlDataReader sqr = cmd.ExecuteReader();
             if (sqr.HasRows)
             {
                 while (sqr.Read())
                 {
                     int acc_id = sqr.GetInt32(sqr.GetOrdinal("account_id"));
-                    string name = sqr.GetString(sqr.GetOrdinal("name"));
+                    string name = sqr.GetString(sqr.GetOrdinal("cust_" +
+                        "name"));
                     string acc_type = sqr.GetString(sqr.GetOrdinal("acc_type"));
                     int balance = sqr.GetInt32(sqr.GetOrdinal("balance"));
-                    if (acc_id==id)
-                    {
-                        Console.WriteLine(id+" "+name+" "+acc_type+" "+balance);
+
+                    Console.WriteLine("Id  name acc_type " +
+                        " balance");
+                        Console.WriteLine(id + " " + name + " " + acc_type + " " + balance);
                         break;
 
-                    }
+                    
 
                 }
 
             }
             else
             {
-                Console.WriteLine("The table is empty");
+                Console.WriteLine( "The provided account id does not exists." );
             }
+
+            sqr.Close();
+          
+           
+
 
 
         }
+        
 
     }
 }

@@ -12,15 +12,7 @@ namespace Bank
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Class1 c1 = new Class1();
-                c1.initial_connection();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+           
 
             int option = 0;
             int decide = 1;
@@ -30,30 +22,39 @@ namespace Bank
 
             while (decide == 1)
             {
-                Console.WriteLine("Enter which operation You want to perform: 1: Add_account 2: Deposit 3.Withdrawal 4. Calculate interest remaining: ");
+                Console.WriteLine("Enter which operation You want to perform: 1: Add_account 2: Deposit 3.Withdrawal 4. Calculate interest remaining: 5.Display Account Details ");
                 option = int.Parse(Console.ReadLine());
 
                 switch (option)
                 {
                     case 1:
-
-                        Accounts.Add_account();
+                        Accounts a1 = new Accounts();
+                       a1.Add_account();
                         break;
 
                     case 2:
-                        
-                        
-                       
-                        Accounts.deposit();
+
+
+
+                        Accounts a2 = new Accounts();
+                       a2.deposit();
                         break;
 
                    case 3:
-                        Accounts.withdraw();
+
+                        Accounts a3 = new Accounts();
+                       a3.withdraw();
                         break;
 
                    case 4:
-                        Accounts.interest();
 
+                        Accounts a4 = new Accounts();
+                        a4.interest();
+
+                        break;
+                    case 5:
+                        Class1 c = new Class1();
+                        c.Display();
                         break;
 
               }
@@ -61,6 +62,7 @@ namespace Bank
                Console.WriteLine("Do you want to continue: 1: Yes 2: No");
                decide = int.Parse(Console.ReadLine());
             }
+            
 
 
 
