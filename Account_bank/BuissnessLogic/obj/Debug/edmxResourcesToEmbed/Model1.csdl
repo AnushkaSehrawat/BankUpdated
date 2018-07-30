@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="account_id" />
+    </Key>
+    <Property Name="account_id" Type="Int32" Nullable="false" />
+    <Property Name="cust_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="acc_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="balance" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AccEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+  </EntityContainer>
+</Schema>

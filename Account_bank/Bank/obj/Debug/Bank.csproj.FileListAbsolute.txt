@@ -10,7 +10,6 @@ C:\Users\asehrawat\source\repos\Account_bank\Bank\obj\Debug\Bank.pdb
 C:\Users\asehrawat\source\repos\Account_bank\Bank\bin\Debug\App.config
 C:\Users\asehrawat\source\repos\Account_bank\Bank\bin\Debug\BuissnessLogic.dll
 C:\Users\asehrawat\source\repos\Account_bank\Bank\bin\Debug\BuissnessLogic.pdb
-C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.csprojResolveAssemblyReference.cache
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.exe
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.pdb
@@ -22,3 +21,8 @@ C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\Buissnes
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\Account_bank.pdb
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\Account_bank.dll.config
 C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\BuissnessLogic.pdb
+C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\EntityFramework.dll
+C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\BuissnessLogic.dll.config
+C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\bin\Debug\EntityFramework.xml
+C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.csprojAssemblyReference.cache
+C:\Users\asehrawat\source\repos\BankUpdated\Account_bank\Bank\obj\Debug\Bank.csproj.CopyComplete
